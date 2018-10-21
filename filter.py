@@ -65,7 +65,7 @@ for article in articles:
 # combine all frequencies
 combined_articles_freq = sorted(combined_articles_freq, key=extract_key)
 
-# code below from https://stackoverflow.com/questions/773/how-do-i-use-pythons-itertools-groupby
+# code below from https://stackoverflow.com/questions/773/how-do-i-use-pythons-itertools-groupby and wherever extract_key is referenced
 aggregate = [[k,[x[1] for x in g]] for k, g in itertools.groupby(combined_articles_freq, extract_key)]
 
 # sum frequencies
